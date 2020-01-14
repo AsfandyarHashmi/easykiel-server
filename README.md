@@ -1,8 +1,8 @@
-# Express Mongoose Passport Local JWT Authentication
+# EasyKiel Server
 
 ## Description
 
-Just a simple authentication template. It can (and must) be greatly improved upon. However, it will set you on the right direction.
+The server-side application for EasyKiel.
 
 ## Usage
 
