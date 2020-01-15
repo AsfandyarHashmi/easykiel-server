@@ -20,6 +20,10 @@ var schema = new mongoose.Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         required: true
+    },
+    slug: {
+        type: String,
+        required: true
     }
 });
 
