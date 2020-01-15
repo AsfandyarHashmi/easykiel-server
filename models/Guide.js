@@ -6,12 +6,16 @@ var schema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    description: {
-        type: String,
+    desc: {
+        type: String
     },
     steps: {
         type: String,
-        required: true,
+        required: true
+    },
+    coords: {
+        type: String,
+        required: true
     },
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
