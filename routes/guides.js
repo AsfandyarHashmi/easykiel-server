@@ -22,4 +22,13 @@ router.post('/create', passport.authenticate('jwt', {
         .catch(err => res.status(400).json(err));
 });
 
+router.get('/:guide_slug', function (req, res, next) {
+    Guide.findOne({ slug: req.params.guide_slug }, function(err, guide) {
+        if(err){
+            res.status(400).json(err);
+        }
+        res.json(guide);
+    });
+});
+
 module.exports = router;
