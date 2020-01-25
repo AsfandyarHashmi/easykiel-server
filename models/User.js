@@ -11,6 +11,10 @@ var schema = new mongoose.Schema({
     hash: {
         type: String,
         required: true
+    },
+    user_role: {
+        type: Number,
+        required: true
     }
 });
 

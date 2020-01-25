@@ -8,6 +8,7 @@ var User = require('../models/User');
 router.post('/create', function (req, res, next) {
   var username = req.body.username;
   var password = req.body.password;
+  var user_role = req.body.user_role;
 
   var salt = bcrypt.genSaltSync(10);
   var hash = bcrypt.hashSync(password, salt);
@@ -15,6 +16,7 @@ router.post('/create', function (req, res, next) {
   var user = new User();
   user.username = username;
   user.hash = hash;
+  user.user_role = user_role;
   user.save().then((user) => {
       res.json({
         'token': user.genJwt()
