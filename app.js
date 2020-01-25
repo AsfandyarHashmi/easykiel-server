@@ -7,8 +7,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var passport = require('passport');
 var mongoose = require('mongoose');
+var cors = require('cors')
 
 var app = express();
+
+// cors setup
+var corsOptions = {
+  origin: 'http://localhost:4200',
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
+
 
 // mongoose setup
 mongoose.connect('mongodb://' + process.env.DB_HOST + '/' + process.env.DB_NAME, {useNewUrlParser: true});
