@@ -16,6 +16,7 @@ router.post('/create', passport.authenticate('jwt', {
     guide.steps = req.body.steps;
     guide.coords = req.body.coords;
     guide.slug = urlslug(req.body.title);
+    guide.type = req.body.type;
     guide.save().then((guide) => {
             res.json(guide);
         })
