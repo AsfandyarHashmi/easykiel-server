@@ -28,7 +28,8 @@ var schema = new mongoose.Schema({
     type: {
         type: Number,
         required: true
-    }
+    },
+    time : { type : Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Guide', schema);

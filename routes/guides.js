@@ -32,4 +32,22 @@ router.get('/:guide_slug', function (req, res, next) {
     });
 });
 
+router.get('/user/:id', function (req, res, next) {
+    Guide.find({ user_id: req.params.id }, function(err, guides) {
+        if(err){
+            res.status(400).json(err);
+        }
+        res.json(guides);
+    });
+});
+
+router.get('/latest', function(req, res, next) {
+    Guide.find({}).sort({time: -1}).execFind(function(err, guides){ 
+        if(err){
+            res.status(400).json(err);
+        }
+        res.json(guides);
+    });
+});
+
 module.exports = router;

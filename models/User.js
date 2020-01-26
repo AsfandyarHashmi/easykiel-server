@@ -15,7 +15,8 @@ var schema = new mongoose.Schema({
     user_role: {
         type: Number,
         required: true
-    }
+    },
+    time : { type : Date, default: Date.now }
 });
 
 schema.methods.verifyPassword = function(password) {
