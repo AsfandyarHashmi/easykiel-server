@@ -24,6 +24,10 @@ var schema = new mongoose.Schema({
     slug: {
         type: String,
         required: true
+    },
+    guide_type: {
+        type: Number,
+        required: true
     }
 });
 
