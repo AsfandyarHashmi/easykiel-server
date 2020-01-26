@@ -41,8 +41,8 @@ router.get('/user/:id', function (req, res, next) {
     });
 });
 
-router.get('/latest', function(req, res, next) {
-    Guide.find({}).sort({time: -1}).execFind(function(err, guides){ 
+router.get('/get/latest', function(req, res, next) {
+    Guide.find({}, function(err, guides) {
         if(err){
             res.status(400).json(err);
         }
