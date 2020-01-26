@@ -12,11 +12,12 @@ var cors = require('cors')
 var app = express();
 
 // cors setup
-var corsOptions = {
-  origin: 'http://localhost:4200',
-  optionsSuccessStatus: 200
-}
-app.use(cors(corsOptions));
+//var corsOptions = {
+//  origin: 'http://localhost:4200',
+//  optionsSuccessStatus: 200
+//}
+//app.use(cors(corsOptions));
+app.use(cors());
 
 
 // mongoose setup
