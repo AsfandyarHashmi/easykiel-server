@@ -25,7 +25,7 @@ var schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    guide_type: {
+    type: {
         type: Number,
         required: true
     }
